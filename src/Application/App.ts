@@ -1,10 +1,17 @@
-import UI from "@ui/main";
+import UI from "@ui/main"
+import Project from "@gameengine/Core/Project"
 
 class App {
-    static launch(mountOn: string) {
-        UI.setup();
-        UI.mount(mountOn);
+
+    static load() {
+
+    }
+
+    static launch(mountOn: string, project: Project) {
+        UI.setup()
+
+        UI.mount(mountOn)
     }
 }
 
-export default App;
+export default App

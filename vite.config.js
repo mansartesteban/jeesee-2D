@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import path from "path";
+import { defineConfig } from "vite"
+import path from "path"
 
-const root = path.resolve(__dirname);
+const root = path.resolve(__dirname)
 
 export default defineConfig({
   resolve: {
@@ -10,7 +10,7 @@ export default defineConfig({
       "@gameengine": path.join(root, "src", "Application", "GameEngine"),
       "@ui": path.join(root, "src", "Application", "UI"),
       "@commons": path.join(root, "src", "Application", "Commons"),
-      "@styles": path.join(root, "public", "assets", "styles"),
+      "@styles": path.join(root, "assets", "styles"),
     },
   },
   module: {
@@ -21,4 +21,4 @@ export default defineConfig({
       },
     ],
   },
-});
+})
