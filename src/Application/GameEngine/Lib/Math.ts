@@ -41,6 +41,13 @@ class MathUtils {
   static radiansToDegrees(radians: number = 0) {
     return radians * (180 / Math.PI);
   }
+  static #thousandSuffix(n: number) {
+    return ["", "K", "M", "B", "T", "Qd", "Qt", "Sx", "St", "O", "N"][Math.floor((n.toString().length - 1) / 3)]
+  }
+  static thousandNumber(n: number) {
+    let s = n.toString()
+    return [s.slice(0, 1) + s.slice(1, s.slice(1).length % 3 + 1), this.#thousandSuffix(n)].join(" ").trim()
+  }
 }
 
 export default MathUtils;
